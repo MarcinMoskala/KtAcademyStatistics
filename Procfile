@@ -1,1 +1,1 @@
-web:    build/install/KtAcademyBackend/bin/KtAcademyBackend -port=$PORT
+web:    build/install/KtAcademyStatistics/bin/KtAcademyStatistics -port=$PORT
