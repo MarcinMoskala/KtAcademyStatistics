@@ -15,6 +15,10 @@ import org.koin.ktor.ext.inject
 fun Application.setupEndpoints() {
     routing {
         val facade: StatisticsService by inject()
+        get {
+            call.respond("Works :)")
+        }
+
         route("/page-load") {
             post {
                 val userUuid = headerUUID()
