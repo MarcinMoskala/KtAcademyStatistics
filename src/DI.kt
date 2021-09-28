@@ -23,7 +23,7 @@ fun productionModule(): Module = module {
     single<CoroutineDatabase> {
         KMongo.createClient("mongodb+srv://admin:cde34RFVBGHN@cluster0.ebez3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
             .coroutine
-            .getDatabase("ktacademy")
+            .getDatabase("statistics")
     }
     single<PageStatsRepository> {
         MongoPageStatsRepository(
