@@ -21,7 +21,7 @@ fun productionModule(): Module = module {
     single<TimeProvider> { RealTimeProvider() }
     single<UuidProvider> { RandomUuidProvider() }
     single<CoroutineDatabase> {
-        KMongo.createClient("mongodb+srv://marcinmoskala:cde34RFVBGHN@cluster0-w3cil.mongodb.net/<dbname>?retryWrites=true&w=majority")
+        KMongo.createClient("mongodb+srv://admin:cde34RFVBGHN@cluster0.ebez3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
             .coroutine
             .getDatabase("ktacademy")
     }
