@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Header
 
 class KtaRepositoryRepository : UserRepository {
-    private val api = makeRetrofit("https://gapi.kt.academy/")
+    private val api = makeRetrofit("https://api.kt.academy/")
         .create(LeanpubCouponsApi::class.java)
 
     override suspend fun isAdmin(userUuid: String): Boolean =

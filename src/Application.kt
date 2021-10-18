@@ -21,14 +21,9 @@ fun Application.module() {
         modules(productionModule())
     }
     app()
-    Sentry.init { options: SentryOptions -> options.dsn = "https://ce3d8eb6c77d474da98efa6d0af12d3c@o472757.ingest.sentry.io/5506798" }
 }
 
 fun Application.app() {
-    install(FreeMarker) {
-        templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates")
-    }
-
     install(CORS) {
         anyHost()
         header(HttpHeaders.XForwardedProto)
